@@ -1,11 +1,15 @@
 /node_modules
+/public/build
 /public/hot
+/public/mix-manifest.json
 /public/storage
 /storage/*.key
 /vendor
 .env
+.env.testing
 .env.backup
 .phpunit.result.cache
+.php_cs.cache
 Homestead.json
 Homestead.yaml
 npm-debug.log
