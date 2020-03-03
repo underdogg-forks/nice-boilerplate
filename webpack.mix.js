@@ -24,9 +24,6 @@ mix
   // Registers CSS and PostCSS
   .postCss('resources/css/app.css', 'public/build', require('./postcss.config').plugins)
 
-  // Copies images
-  // .copyDirectory('resources/storage', 'public/storage')
-
   // Adds webpack rules
   .webpackConfig({
     // Code splitting options
@@ -44,10 +41,6 @@ mix
     module: {
       rules: [
         {
-          test: /resources[\\\/]lang.+\.(php|json)$/,
-          loader: 'laravel-localization-loader',
-        },
-        {
           test: /\.(postcss)$/,
           use: ['vue-style-loader', { loader: 'css-loader', options: { importLoaders: 1 } }, 'postcss-loader'],
         },
@@ -63,8 +56,7 @@ mix
   // Registers PurgeCSS
   .purgeCss({
     content: [
-      './app/**/*.php',
-      './src/**/*.php',
+      './src/**/*.php', // `/app` by default, but this boilerplate uses `/src`
       './resources/**/*.html',
       './resources/**/*.js',
       './resources/**/*.jsx',
@@ -77,7 +69,7 @@ mix
     whitelistPatterns: [/-active$/, /-enter$/, /-leave-to$/],
   })
 
-  // Enabled localization
+  // Enables localization
   .lang()
 
   // Enables versioning
