@@ -727,6 +727,11 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
+"@ctrl/tinycolor@^2.5.3":
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/@ctrl/tinycolor/-/tinycolor-2.6.1.tgz#0e78cc836a1fd997a9a22fa1c26c555411882160"
+  integrity sha512-xKN3lAA+xbNhP+JX3sLhzA65IGiKqun/Yf9jBlZX7Og0SxlCrrqKxqTd6ccn20fv3Cgcvq6KnjPhnmS+v7uAwQ==
+
 "@fullhuman/postcss-purgecss@^2.0.5", "@fullhuman/postcss-purgecss@^2.1.0":
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/@fullhuman/postcss-purgecss/-/postcss-purgecss-2.1.0.tgz#955fc2e3f69b0d0c84367eeee4f85c01238a65dc"
@@ -6571,6 +6576,13 @@ svgo@^1.0.0:
     stable "^0.1.8"
     unquote "~1.1.1"
     util.promisify "~1.0.0"
+
+tailwindcss-theming@^2.4.2:
+  version "2.4.2"
+  resolved "https://registry.yarnpkg.com/tailwindcss-theming/-/tailwindcss-theming-2.4.2.tgz#123825768f50972397fabaeeb44476c46a894fa6"
+  integrity sha512-dKBy/+InjwM2FlvqYFgbazRvDsDjmObxm5H5Ki2U9+jI8YohE/2kE3cZwS1P4nY89ZuSlD0u8kAhm90fGvGVOA==
+  dependencies:
+    "@ctrl/tinycolor" "^2.5.3"
 
 tailwindcss@^1.2.0:
   version "1.2.0"

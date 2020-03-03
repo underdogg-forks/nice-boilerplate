@@ -7,6 +7,9 @@
     <script src="{{ mix('/build/app.js') }}" defer></script>
     {{-- <link rel="stylesheet" href="https://rsms.me/inter/inter.css"> --}}
   </head>
+  
+  {{-- You can change data-theme to change your theme if you're using Tailwind Theming --}}
+  {{-- <body data-theme="dark"> --}}
   <body>
     @inertia
   </body>
