@@ -4,6 +4,10 @@
 
 This boilerplate uses [Laravel 7](https://laravel-news.com/laravel7), Vue (with the [composition plugin](https://github.com/vuejs/composition-api)), TypeScript, [Inertia.js](https://inertiajs.com/) and the [domain-oriented hierarchy](https://stitcher.io/blog/laravel-beyond-crud-01-domain-oriented-laravel) structure from [Brent's Laravel Beyond CRUD](https://stitcher.io/blog/laravel-beyond-crud).
 
+```bash
+$ composer create-project hawezo/laravel-boilerplate your-app
+```
+
 ### Inertia.js
 
 [Inertia.js](https://inertiajs.com/) is installed and configured. You can learn more about the [Vue Adapter](https://github.com/inertiajs/inertia-vue) and the [Laravel Adapter](https://github.com/inertiajs/inertia-laravel). 
