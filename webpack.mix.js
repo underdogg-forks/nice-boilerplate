@@ -1,6 +1,5 @@
 const mix = require('laravel-mix');
 const path = require('path');
-require('laravel-mix-purgecss');
 require('laravel-vue-lang/mix');
 
 /*
@@ -26,7 +25,7 @@ mix
 
   // Adds webpack rules
   .webpackConfig({
-    // Code splitting options
+    // Versioning options
     output: { chunkFilename: 'js/[name].js?id=[chunkhash]' },
 
     // Adds aliases for cleaner import
@@ -37,7 +36,7 @@ mix
       },
     },
 
-    // Translator loader
+    // Loader
     module: {
       rules: [
         {
@@ -51,22 +50,6 @@ mix
   // Adds babel plugins
   .babelConfig({
     plugins: ['@babel/plugin-syntax-dynamic-import'],
-  })
-
-  // Registers PurgeCSS
-  .purgeCss({
-    content: [
-      './src/**/*.php', // `/app` by default, but this boilerplate uses `/src`
-      './resources/**/*.html',
-      './resources/**/*.js',
-      './resources/**/*.jsx',
-      './resources/**/*.ts',
-      './resources/**/*.tsx',
-      './resources/**/*.php',
-      './resources/**/*.vue',
-    ],
-    defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || [],
-    whitelistPatterns: [/-active$/, /-enter$/, /-leave-to$/],
   })
 
   // Enables localization
