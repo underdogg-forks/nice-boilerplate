@@ -1,6 +1,16 @@
 const tailwind = require('tailwindcss/defaultTheme');
 
 module.exports = {
+  purge: [
+    './src/**/*.php', // `/app` by default, but this boierlplate uses `/src`
+    './resources/**/*.html',
+    './resources/**/*.js',
+    './resources/**/*.jsx',
+    './resources/**/*.ts',
+    './resources/**/*.tsx',
+    './resources/**/*.php',
+    './resources/**/*.vue',
+  ],
   theme: {
     extend: {
       fontFamily: {
