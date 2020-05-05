@@ -1,7 +1,7 @@
 {
     "name": "hawezo/laravel-boilerplate",
     "type": "project",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "Laravel 7 boilerplate made to quickly get started.",
     "keywords": [
         "laravel",
