@@ -1,10 +1,22 @@
-const { ThemeBuilder, Theme } = require('tailwindcss-theming');
+/*
+|--------------------------------------------------------------------------
+| This is your theming configuration.
+|--------------------------------------------------------------------------
+| 
+| Create themes with interchangeable colors, and swap them at run-time
+| depending on user preferences.
+|
+| https://github.com/hawezo/tailwindcss-theming
+|
+*/
 
-const lightTheme = new Theme()
-  .name('light')
-  .default()
-  .assignable()
-  .colors({
+const { ThemeManager, Theme } = require('tailwindcss-theming/api');
+
+// Creates a light theme.
+const light = new Theme()
+  .setName('light')
+  .targetable()
+  .addColors({
     // Brand colors
     brand: '#2196f3',
     'on-brand': '#f9fafb',
@@ -26,28 +38,35 @@ const lightTheme = new Theme()
     'on-info': '#f9fafb',
   });
 
-const darkTheme = new Theme().name('dark').colors({
-  // Brand colors
-  brand: '#2196f3',
-  'on-brand': '#f9fafb',
+// Creates a dark theme.
+const dark = new Theme()
+  .setName('dark')
+  .targetable()
+  .addColors({
+    // Brand colors
+    brand: '#2196f3',
+    'on-brand': '#f9fafb',
 
-  // Background colors, but not limited to `bg` utilities.
-  background: '#161e2e',
-  surface: '#161e2e',
-  'on-background': '#f9fafb',
-  'on-surface': '#f9fafb',
+    // Background colors, but not limited to `bg` utilities.
+    background: '#161e2e',
+    surface: '#161e2e',
+    'on-background': '#f9fafb',
+    'on-surface': '#f9fafb',
 
-  // Event colors.
-  error: '#f05252',
-  'on-error': '#f9fafb',
-  success: '#3ab577',
-  'on-success': '#f9fafb',
-  warning: '#ff5a1f',
-  'on-warning': '#f9fafb',
-  info: '#3f83f8',
-  'on-info': '#f9fafb',
-});
-module.exports = new ThemeBuilder()
-  .asDataThemeAttribute()
-  .default(lightTheme)
-  .dark(darkTheme);
+    // Event colors.
+    error: '#f05252',
+    'on-error': '#f9fafb',
+    success: '#3ab577',
+    'on-success': '#f9fafb',
+    warning: '#ff5a1f',
+    'on-warning': '#f9fafb',
+    info: '#3f83f8',
+    'on-info': '#f9fafb',
+  });
+
+// Exports the configuration, with the light theme
+// set as the default and the dark one set for the
+// `dark` option of `prefers-color-scheme`.
+module.exports = new ThemeManager()
+  .setDefaultTheme(light)
+  .setDefaultDarkTheme(dark);
