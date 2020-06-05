@@ -24,7 +24,7 @@ module.exports = {
     // Order is important if you want to use the two plugins in combination.
     require('tailwindcss-theming')({
       // Remove the preset and start using your own palette when you're ready.
-      // See: https://github.com/hawezo/tailwindcss-theming/blob/master/docs/themes.md#configuring-your-themes
+      // See: https://github.com/innocenzi/tailwindcss-theming/blob/master/docs/themes.md#configuring-your-themes
       preset: 'tailwind-vanilla',
     }),
 
