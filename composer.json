@@ -1,7 +1,7 @@
 {
-  "name": "hawezo/laravel-boilerplate",
+  "name": "innocenzi/laravel-boilerplate",
   "type": "project",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Laravel 7 boilerplate made to quickly get started.",
   "keywords": [
     "laravel",
