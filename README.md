@@ -1,4 +1,6 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+> **This boilerplate is abandoned**. For getting-started resources related to Inertia, please take a look at the [Awesome repository](https://github.com/innocenzi/awesome-inertiajs).
+
+---
 
 ## Boilerplate
 
