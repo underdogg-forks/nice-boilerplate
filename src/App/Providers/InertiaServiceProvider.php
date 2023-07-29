@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Providers;
 
 use Illuminate\Foundation\Application;
@@ -15,7 +17,7 @@ class InertiaServiceProvider extends ServiceProvider
     /**
      * Register services.
      */
-    public function register()
+    public function register(): void
     {
         $this->registerMixVersion();
         $this->shareApplication();
@@ -26,7 +28,7 @@ class InertiaServiceProvider extends ServiceProvider
     /**
      * Sets the mix version from the manifest.
      */
-    public function registerMixVersion()
+    public function registerMixVersion(): void
     {
         Inertia::version(function () {
             return md5_file(public_path('mix-manifest.json'));
@@ -36,7 +38,7 @@ class InertiaServiceProvider extends ServiceProvider
     /**
      * Share global application data.
      */
-    public function shareApplication()
+    public function shareApplication(): void
     {
         Inertia::share([
             'app' => function () {
@@ -57,7 +59,7 @@ class InertiaServiceProvider extends ServiceProvider
     /**
      * Share authentification data.
      */
-    public function shareAuthentification()
+    public function shareAuthentification(): void
     {
         Inertia::share([
             'auth' => function () {
@@ -75,7 +77,7 @@ class InertiaServiceProvider extends ServiceProvider
     /**
      * Share flashes and errors.
      */
-    public function shareFlashes()
+    public function shareFlashes(): void
     {
         Inertia::share([
             'flash' => function () {

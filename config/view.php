@@ -1,7 +1,8 @@
 <?php
 
-return [
+declare(strict_types=1);
 
+return [
     /*
     |--------------------------------------------------------------------------
     | View Storage Paths
@@ -45,5 +46,4 @@ return [
      */
 
     'expires' => env('VIEW_CHECK_EXPIRATION', true),
-
 ];
